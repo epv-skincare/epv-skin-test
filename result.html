@@ -40,15 +40,15 @@
 
     if (type === 'simple') {
       if (score <= 3) {
-        resultMessage = '💦 유분 충만\n권장: 밸런스드롭 0~0.5통';
+        resultMessage = '💦 유분 충만<br>권장: 밸런스드롭 0~0.5통';
       } else if (score <= 6) {
-        resultMessage = '🌗 밸런스 이상징후\n권장: 밸런스드롭 0.5~1통';
+        resultMessage = '🌗 밸런스 이상징후<br>권장: 밸런스드롭 0.5~1통';
       } else if (score <= 10) {
-        resultMessage = '💧 수분 부족 예보\n권장: 밸런스드롭 1~2통';
+        resultMessage = '💧 수분 부족 예보<br>권장: 밸런스드롭 1~2통';
       } else if (score <= 14) {
-        resultMessage = '🌬️ 건조 주의보\n권장: 밸런스드롭 2~3통';
+        resultMessage = '🌬️ 건조 주의보<br>권장: 밸런스드롭 2~3통';
       } else if (score <= 18) {
-        resultMessage = '🔥 보습 경보 발동\n권장: 밸런스드롭 3~4통';
+        resultMessage = '🔥 보습 경보 발동<br>권장: 밸런스드롭 3~4통';
       } else {
         resultMessage = '⚠️ 오류: 점수 범위를 벗어났습니다';
       }
@@ -86,7 +86,7 @@
       resultMessage = '⚠️ 오류: 테스트 유형을 알 수 없습니다';
     }
 
-    document.getElementById('resultText').textContent = resultMessage;
+    document.getElementById('resultText').innerHTML = resultMessage;
   </script>
 </body>
 </html>
