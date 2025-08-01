@@ -68,3 +68,32 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #e5ae0f;
 }
+@media (max-width: 600px) {
+  .container {
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .question {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .question p {
+    font-size: 15px;
+  }
+
+  .question label {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}
