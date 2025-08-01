@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>피부타입 테스트</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #FFFCF0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .button {
+      background-color: #ffc21a;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      margin: 0.75rem 0;
+      border-radius: 10px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      cursor: pointer;
+      width: 250px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e6ae00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>나에게 맞는 피부타입 테스트를 선택하세요</h1>
+    <button class="button" onclick="location.href='simple.html'">간단 테스트</button>
+    <button class="button" onclick="location.href='standard.html'">표준 테스트</button>
+    <button class="button" onclick="location.href='advanced.html'">정밀 테스트</button>
+  </div>
+</body>
+</html>
+

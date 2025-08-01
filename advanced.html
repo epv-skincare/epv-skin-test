@@ -1,0 +1,245 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>정밀 테스트</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>정밀 피부타입 테스트</h2>
+    <form id="test-form">
+
+<!-- Q1 -->
+<div class="question">
+  <p>Q1. 아침에 세안 후 아무것도 안 바르면 피부가 어떤가요?</p>
+  <label><input type="radio" name="q1" value="3" required> A. 따갑고 심하게 당긴다</label>
+  <label><input type="radio" name="q1" value="2"> B. 건조해서 바로 바르고 싶다</label>
+  <label><input type="radio" name="q1" value="1"> C. 약간 당기지만 참을만하다</label>
+  <label><input type="radio" name="q1" value="0"> D. 아무렇지 않다 / 오히려 유분이 돈다</label>
+</div>
+
+<!-- Q2 -->
+<div class="question">
+  <p>Q2. 오후가 되면 피부 상태는 어떤가요?</p>
+  <label><input type="radio" name="q2" value="3" required> A. 각질, 건조, 푸석함</label>
+  <label><input type="radio" name="q2" value="2"> B. 땅김 있음</label>
+  <label><input type="radio" name="q2" value="1"> C. 변화 없음</label>
+  <label><input type="radio" name="q2" value="0"> D. 번들거림, 유분감</label>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+  <p>Q3. 보습제를 발라도 속당김이 사라지지 않나요?</p>
+  <label><input type="radio" name="q3" value="3" required> A. 네, 아무리 발라도 당겨요</label>
+  <label><input type="radio" name="q3" value="2"> B. 흡수 후 다시 건조해져요</label>
+  <label><input type="radio" name="q3" value="1"> C. 듬뿍 바르면 괜찮아요</label>
+  <label><input type="radio" name="q3" value="0"> D. 기본만 해도 충분해요</label>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+  <p>Q4. T존과 U존의 느낌은 각각 어떤가요?</p>
+  <label><input type="radio" name="q4" value="3" required> A. 둘 다 건조하다</label>
+  <label><input type="radio" name="q4" value="2"> B. T존은 보통, U존은 건조</label>
+  <label><input type="radio" name="q4" value="1"> C. T존은 살짝 유분, U존은 보통</label>
+  <label><input type="radio" name="q4" value="0"> D. T존 번들, U존도 유분 많음</label>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+  <p>Q5. 기초 제품을 바를 때 순서나 양에 따라 당김이 달라지나요?</p>
+  <label><input type="radio" name="q5" value="3" required> A. 맞춰도 당김 있음</label>
+  <label><input type="radio" name="q5" value="2"> B. 잘 맞추면 괜찮음</label>
+  <label><input type="radio" name="q5" value="1"> C. 신경 안 써도 문제 없음</label>
+  <label><input type="radio" name="q5" value="0"> D. 양이 많으면 오히려 부담됨</label>
+</div>
+
+<!-- Q6 -->
+<div class="question">
+  <p>Q6. 여름철에 유분이 늘어나도 피부 속은 건조한가요?</p>
+  <label><input type="radio" name="q6" value="3" required> A. 네, 겉은 번들인데 속은 땡겨요</label>
+  <label><input type="radio" name="q6" value="2"> B. 가끔 그런 느낌이 있어요</label>
+  <label><input type="radio" name="q6" value="1"> C. 잘 모르겠어요</label>
+  <label><input type="radio" name="q6" value="0"> D. 유분 많고 당김 없음</label>
+</div>
+
+<!-- Q7 -->
+<div class="question">
+  <p>Q7. 겨울철 피부 상태는?</p>
+  <label><input type="radio" name="q7" value="3" required> A. 갈라짐, 트러블, 따가움 심함</label>
+  <label><input type="radio" name="q7" value="2"> B. 각질·당김 있음</label>
+  <label><input type="radio" name="q7" value="1"> C. 약간 건조함</label>
+  <label><input type="radio" name="q7" value="0"> D. 변화 거의 없음</label>
+</div>
+
+<!-- Q8 -->
+<div class="question">
+  <p>Q8. 환절기(봄/가을)엔 어떤가요?</p>
+  <label><input type="radio" name="q8" value="3" required> A. 트러블, 당김, 예민 폭발</label>
+  <label><input type="radio" name="q8" value="2"> B. 뭔가 건조하고 불편</label>
+  <label><input type="radio" name="q8" value="1"> C. 살짝 민감해짐</label>
+  <label><input type="radio" name="q8" value="0"> D. 거의 차이 없음</label>
+</div>
+
+<!-- Q9 -->
+<div class="question">
+  <p>Q9. 바람이나 먼지, 에어컨 바람에도 자극받나요?</p>
+  <label><input type="radio" name="q9" value="3" required> A. 예민해서 바로 반응함</label>
+  <label><input type="radio" name="q9" value="2"> B. 가끔 붉어짐</label>
+  <label><input type="radio" name="q9" value="1"> C. 약간 예민</label>
+  <label><input type="radio" name="q9" value="0"> D. 별로 영향 없음</label>
+</div>
+
+<!-- Q10 -->
+<div class="question">
+  <p>Q10. 햇빛에 노출되면 피부가 어떤가요?</p>
+  <label><input type="radio" name="q10" value="3" required> A. 금방 붉어지고 화끈해짐</label>
+  <label><input type="radio" name="q10" value="2"> B. 붉어짐 있음</label>
+  <label><input type="radio" name="q10" value="1"> C. 별 차이 없음</label>
+  <label><input type="radio" name="q10" value="0"> D. 오히려 건강해 보임</label>
+</div>
+
+<!-- Q11 -->
+<div class="question">
+  <p>Q11. 땀이 나면 피부가 간지럽거나 트러블 생기나요?</p>
+  <label><input type="radio" name="q11" value="3" required> A. 거의 매번 그렇다</label>
+  <label><input type="radio" name="q11" value="2"> B. 자주 있다</label>
+  <label><input type="radio" name="q11" value="1"> C. 가끔 있다</label>
+  <label><input type="radio" name="q11" value="0"> D. 없다</label>
+</div>
+
+<!-- Q12 -->
+<div class="question">
+  <p>Q12. 기후 변화나 해외여행 시 피부가 무너지는 편인가요?</p>
+  <label><input type="radio" name="q12" value="3" required> A. 네, 피부 완전 무너짐</label>
+  <label><input type="radio" name="q12" value="2"> B. 당김·트러블 있음</label>
+  <label><input type="radio" name="q12" value="1"> C. 살짝 건조해짐</label>
+  <label><input type="radio" name="q12" value="0"> D. 거의 차이 없음</label>
+</div>
+
+<!-- Q13 -->
+<div class="question">
+  <p>Q13. 제형 중 가장 선호하는 질감은?</p>
+  <label><input type="radio" name="q13" value="3" required> A. 꾸덕한 밤 타입</label>
+  <label><input type="radio" name="q13" value="2"> B. 크리미한 크림 타입</label>
+  <label><input type="radio" name="q13" value="1"> C. 묽은 로션/에멀전</label>
+  <label><input type="radio" name="q13" value="0"> D. 수분젤, 워터리 토너</label>
+</div>
+
+<!-- Q14 -->
+<div class="question">
+  <p>Q14. 유분감이 있는 제품을 바르면 피부가 어떤가요?</p>
+  <label><input type="radio" name="q14" value="3" required> A. 피부가 편안하고 오래 촉촉하다</label>
+  <label><input type="radio" name="q14" value="2"> B. 건조함은 줄지만 약간 무겁다</label>
+  <label><input type="radio" name="q14" value="1"> C. 처음엔 괜찮지만 금방 건조해진다</label>
+  <label><input type="radio" name="q14" value="0"> D. 바르면 답답하거나 트러블 생긴다</label>
+</div>
+
+<!-- Q15 -->
+<div class="question">
+  <p>Q15. 스킨케어 제품이 빨리 흡수되나요?</p>
+  <label><input type="radio" name="q15" value="3" required> A. 아무리 발라도 겉도는 느낌</label>
+  <label><input type="radio" name="q15" value="2"> B. 시간이 오래 걸림</label>
+  <label><input type="radio" name="q15" value="1"> C. 보통</label>
+  <label><input type="radio" name="q15" value="0"> D. 빠르게 흡수됨</label>
+</div>
+
+<!-- Q16 -->
+<div class="question">
+  <p>Q16. 아침 스킨케어 후 메이크업이 잘 먹나요?</p>
+  <label><input type="radio" name="q16" value="3" required> A. 들뜨고 뭉친다</label>
+  <label><input type="radio" name="q16" value="2"> B. 속당김 있어 베이스가 갈라짐</label>
+  <label><input type="radio" name="q16" value="1"> C. 보통</label>
+  <label><input type="radio" name="q16" value="0"> D. 밀림 없이 잘 됨</label>
+</div>
+
+<!-- Q17 -->
+<div class="question">
+  <p>Q17. 다양한 보습 단계를 모두 거쳐야 안심되나요?</p>
+  <label><input type="radio" name="q17" value="3" required> A. 안 바르면 불안함</label>
+  <label><input type="radio" name="q17" value="2"> B. 3단계 이상은 필수</label>
+  <label><input type="radio" name="q17" value="1"> C. 간단히 발라도 괜찮음</label>
+  <label><input type="radio" name="q17" value="0"> D. 많으면 오히려 부담됨</label>
+</div>
+
+<!-- Q18 -->
+<div class="question">
+  <p>Q18. 제품을 바른 뒤에도 간지러움이나 자극이 느껴지나요?</p>
+  <label><input type="radio" name="q18" value="3" required> A. 자주 느낀다</label>
+  <label><input type="radio" name="q18" value="2"> B. 가끔 있다</label>
+  <label><input type="radio" name="q18" value="1"> C. 거의 없음</label>
+  <label><input type="radio" name="q18" value="0"> D. 전혀 없음</label>
+</div>
+
+<!-- Q19 -->
+<div class="question">
+  <p>Q19. 스킨케어 제품을 바꿨을 때 트러블이 쉽게 나는 편인가요?</p>
+  <label><input type="radio" name="q19" value="3" required> A. 네, 매우 예민해요</label>
+  <label><input type="radio" name="q19" value="2"> B. 자주 바꾸지 않아요</label>
+  <label><input type="radio" name="q19" value="1"> C. 크게 문제 없어요</label>
+  <label><input type="radio" name="q19" value="0"> D. 아무거나 잘 써요</label>
+</div>
+
+<!-- Q20 -->
+<div class="question">
+  <p>Q20. 피부 진단기에서 수분 부족/유분 과다 진단을 받은 적 있나요?</p>
+  <label><input type="radio" name="q20" value="3" required> A. 수분도 유분도 부족</label>
+  <label><input type="radio" name="q20" value="2"> B. 수분 부족형 지성</label>
+  <label><input type="radio" name="q20" value="1"> C. 수분 정상</label>
+  <label><input type="radio" name="q20" value="0"> D. 유분 과다</label>
+</div>
+
+<!-- Q21 -->
+<div class="question">
+  <p>Q21. 최근 1달간 피부 컨디션을 한 마디로 표현하면?</p>
+  <label><input type="radio" name="q21" value="3" required> A. 땅기고 예민하다</label>
+  <label><input type="radio" name="q21" value="2"> B. 계속 건조하고 푸석하다</label>
+  <label><input type="radio" name="q21" value="1"> C. 무난하다</label>
+  <label><input type="radio" name="q21" value="0"> D. 유분이 많거나 트러블 있다</label>
+</div>
+
+<!-- Q22 -->
+<div class="question">
+  <p>Q22. 화장품 성분에 민감한가요?</p>
+  <label><input type="radio" name="q22" value="3" required> A. 성분 검색 후 구매</label>
+  <label><input type="radio" name="q22" value="2"> B. 천연/약산성 위주 사용</label>
+  <label><input type="radio" name="q22" value="1"> C. 어느 정도 고려</label>
+  <label><input type="radio" name="q22" value="0"> D. 크게 신경 안 씀</label>
+</div>
+
+<!-- Q23 -->
+<div class="question">
+  <p>Q23. 피부 타입이 상황에 따라 자주 변하나요?</p>
+  <label><input type="radio" name="q23" value="3" required> A. 계절, 스트레스에 따라 심하게 변함</label>
+  <label><input type="radio" name="q23" value="2"> B. 계절 따라 조금씩 변함</label>
+  <label><input type="radio" name="q23" value="1"> C. 거의 일정함</label>
+  <label><input type="radio" name="q23" value="0"> D. 항상 같음</label>
+</div>
+
+<!-- Q24 -->
+<div class="question">
+  <p>Q24. 당신의 피부는 전반적으로 어떤 성향이라고 느끼시나요?</p>
+  <label><input type="radio" name="q24" value="3" required> A. 예민하고 건조함</label>
+  <label><input type="radio" name="q24" value="2"> B. 건조하지만 튼튼함</label>
+  <label><input type="radio" name="q24" value="1"> C. 보통</label>
+  <label><input type="radio" name="q24" value="0"> D. 유분 많은 건강 피부</label>
+</div>
+
+<button type="submit">결과 보기</button>
+</form>
+</div>
+
+<script>
+  document.getElementById('test-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    let total = 0;
+    for (const val of data.values()) {
+      total += parseInt(val);
+    }
+    window.location.href = `result.html?type=advanced&score=${total}`;
+  });
+</script>
+</body>
+</html>
