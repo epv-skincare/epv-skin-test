@@ -6,6 +6,7 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 .container {
@@ -40,7 +41,7 @@ h2 {
 
 .question label {
   display: block;
-  margin: 6px 0;
+  margin: 10px 0;
   padding-left: 8px;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -63,6 +64,7 @@ button[type="submit"] {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  min-height: 48px;
 }
 
 button[type="submit"]:hover {
