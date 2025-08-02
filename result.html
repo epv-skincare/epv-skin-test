@@ -165,72 +165,69 @@
       font-size: 1.4rem;
     }
 
-    .description {
+    .description-text {
       font-size: 1rem;
+      margin-top: 1rem;
       line-height: 1.6;
-      margin-top: -1rem;
-      max-width: 600px;
       color: #333;
-      padding: 0 1rem;
-      white-space: pre-line;
     }
   </style>
 </head>
 <body>
   <h1>당신의 피부타입 결과는?</h1>
   <div class="result" id="resultText">결과 분석 중...</div>
-  <div class="description" id="resultDescription"></div>
 
   <script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const score = parseInt(urlParams.get('score'));
-  const type = urlParams.get('type');
+    const urlParams = new URLSearchParams(window.location.search);
+    const score = parseInt(urlParams.get('score'));
+    const type = urlParams.get('type');
 
-  const descriptions = {
-    '유분 충만': '피부가 유분을 과도하게 생성하고 있어요. 유분을 줄이고 수분 위주 케어가 필요해요.',
-    '밸런스 이상징후': '겉은 번들, 속은 당김? 유수분 불균형이 의심됩니다. 수분과 유분의 균형이 핵심이에요.',
-    '수분 부족 예보': '피부가 전체적으로 메마르고 푸석해 보일 수 있어요. 충분한 보습이 필요해요.',
-    '건조 주의보': '장시간 당김이 지속되며 각질이 쉽게 올라올 수 있어요. 수분과 유분을 동시에 보충하세요.',
-    '보습 경보 발동': '피부 장벽이 약해진 상태일 수 있어요. 자극 없이 진정 + 보습 중심 루틴이 필요해요.',
-    '극건성': '극도로 건조한 상태로 트러블, 붉어짐이 동반될 수 있어요. 고보습 케어가 가장 우선입니다.'
-  };
+    const descriptions = {
+      '유분 충만': '피부가 유분을 과도하게 생성하고 있어요. 유분을 줄이고 수분 위주 케어가 필요해요.',
+      '밸런스 이상징후': '겉은 번들, 속은 당김? 유수분 불균형이 의심됩니다. 수분과 유분의 균형이 핵심이에요.',
+      '수분 부족 예보': '피부가 전체적으로 메마르고 푸석해 보일 수 있어요. 충분한 보습이 필요해요.',
+      '건조 주의보': '장시간 당김이 지속되며 각질이 쉽게 올라올 수 있어요. 수분과 유분을 동시에 보충하세요.',
+      '보습 경보 발동': '피부 장벽이 약해진 상태일 수 있어요. 자극 없이 진정 + 보습 중심 루틴이 필요해요.',
+      '극건성': '극도로 건조한 상태로 트러블, 붉어짐이 동반될 수 있어요. 고보습 케어가 가장 우선입니다.'
+    };
 
-  function makeResult(emoji, label, dosage) {
-    const text = `
-      <div style="font-size: 1.6rem; margin-bottom: 0.8rem;">${emoji} ${label}</div>
-      <div class="amount">권장: 밸런스드롭 ${dosage}</div>
-      <div class="description-text">${descriptions[label] || ''}</div>
-    `;
-    return text;
-  }
+    function makeResult(emoji, label, dosage) {
+      return `
+        <div style="font-size: 1.6rem; margin-bottom: 0.8rem;">${emoji} ${label}</div>
+        <div class="amount">권장: 밸런스드롭 ${dosage}</div>
+        <div class="description-text">${descriptions[label] || ''}</div>
+      `;
+    }
 
-  let resultHTML = '';
+    let resultHTML = '';
 
-  if (type === 'simple') {
-    if (score <= 3) resultHTML = makeResult('💦', '유분 충만', '0~0.5통');
-    else if (score <= 6) resultHTML = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
-    else if (score <= 10) resultHTML = makeResult('💧', '수분 부족 예보', '1~2통');
-    else if (score <= 14) resultHTML = makeResult('🌬️', '건조 주의보', '2~3통');
-    else resultHTML = makeResult('🔥', '보습 경보 발동', '3~4통');
-  } else if (type === 'standard') {
-    if (score <= 5) resultHTML = makeResult('💦', '유분 충만', '0~0.5통');
-    else if (score <= 11) resultHTML = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
-    else if (score <= 17) resultHTML = makeResult('💧', '수분 부족 예보', '1~2통');
-    else if (score <= 23) resultHTML = makeResult('🌬️', '건조 주의보', '2~3통');
-    else resultHTML = makeResult('🔥', '보습 경보 발동', '3~4통');
-  } else if (type === 'advanced') {
-    if (score <= 12) resultHTML = makeResult('💦', '유분 충만', '0~0.5통');
-    else if (score <= 25) resultHTML = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
-    else if (score <= 38) resultHTML = makeResult('💧', '수분 부족 예보', '1~2통');
-    else if (score <= 51) resultHTML = makeResult('🌬️', '건조 주의보', '2~3통');
-    else if (score <= 65) resultHTML = makeResult('🔥', '보습 경보 발동', '3~4통');
-    else resultHTML = makeResult('❄️', '극건성', '4통 이상');
-  } else {
-    resultHTML = '⚠️ 오류: 테스트 유형을 알 수 없습니다';
-  }
+    if (type === 'simple') {
+      if (score <= 3) resultHTML = makeResult('💦', '유분 충만', '0~0.5통');
+      else if (score <= 6) resultHTML = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
+      else if (score <= 10) resultHTML = makeResult('💧', '수분 부족 예보', '1~2통');
+      else if (score <= 14) resultHTML = makeResult('🌬️', '건조 주의보', '2~3통');
+      else resultHTML = makeResult('🔥', '보습 경보 발동', '3~4통');
+    } else if (type === 'standard') {
+      if (score <= 5) resultHTML = makeResult('💦', '유분 충만', '0~0.5통');
+      else if (score <= 11) resultHTML = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
+      else if (score <= 17) resultHTML = makeResult('💧', '수분 부족 예보', '1~2통');
+      else if (score <= 23) resultHTML = makeResult('🌬️', '건조 주의보', '2~3통');
+      else resultHTML = makeResult('🔥', '보습 경보 발동', '3~4통');
+    } else if (type === 'advanced') {
+      if (score <= 12) resultHTML = makeResult('💦', '유분 충만', '0~0.5통');
+      else if (score <= 25) resultHTML = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
+      else if (score <= 38) resultHTML = makeResult('💧', '수분 부족 예보', '1~2통');
+      else if (score <= 51) resultHTML = makeResult('🌬️', '건조 주의보', '2~3통');
+      else if (score <= 65) resultHTML = makeResult('🔥', '보습 경보 발동', '3~4통');
+      else resultHTML = makeResult('❄️', '극건성', '4통 이상');
+    } else {
+      resultHTML = '⚠️ 오류: 테스트 유형을 알 수 없습니다';
+    }
 
-  document.getElementById('resultText').innerHTML = resultHTML;
-</script>
+    document.getElementById('resultText').innerHTML = resultHTML;
+  </script>
+</body>
+</html>
 
 
 
