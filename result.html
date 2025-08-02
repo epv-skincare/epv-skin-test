@@ -9,13 +9,22 @@
     body {
       font-family: 'Pretendard', sans-serif;
       background-color: #fefefe;
-      padding: 2rem;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       text-align: center;
+      gap: 2rem;
     }
+
     h1 {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
+      margin: 0;
     }
+
     .result {
       font-size: clamp(1.4rem, 4vw, 2rem);
       font-weight: 700;
@@ -29,6 +38,7 @@
       line-height: 1.6;
       max-width: 90vw;
     }
+
     .amount {
       display: inline-block;
       white-space: nowrap;
@@ -104,6 +114,7 @@
   </script>
 </body>
 </html>
+
 
 
 
