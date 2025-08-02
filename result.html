@@ -19,20 +19,13 @@
       font-size: clamp(1.4rem, 4vw, 2rem);
       font-weight: 700;
       background: #fff6d6;
-      display: inline;
+      display: inline-block;
       padding: 2rem 3rem;
       border-radius: 16px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
       word-break: keep-all;
       white-space: pre-line;
       line-height: 1.6;
-    }
-    .highlight {
-      font-size: 1.6em;
-      font-weight: 800;
-      color: #111;
-      display: inline;
-      margin-bottom: 0.4rem;
     }
   </style>
 </head>
@@ -49,45 +42,45 @@
 
 if (type === 'simple') {
   if (score <= 3) {
-    resultMessage = '💦 <span class="highlight">유분 충만</span>권장: 밸런스드롭 0~0.5통';
+    resultMessage = '💦 <span class="highlight">유분 충만</span><br>권장: 밸런스드롭 0~0.5통';
   } else if (score <= 6) {
-    resultMessage = '🌗 <span class="highlight">밸런스 이상징후</span>권장: 밸런스드롭 0.5~1통';
+    resultMessage = '🌗 <span class="highlight">밸런스 이상징후</span><br>권장: 밸런스드롭 0.5~1통';
   } else if (score <= 10) {
-    resultMessage = '💧 <span class="highlight">수분 부족 예보</span>권장: 밸런스드롭 1~2통';
+    resultMessage = '💧 <span class="highlight">수분 부족 예보</span><br>권장: 밸런스드롭 1~2통';
   } else if (score <= 14) {
-    resultMessage = '🌬️ <span class="highlight">건조 주의보</span>권장: 밸런스드롭 2~3통';
+    resultMessage = '🌬️ <span class="highlight">건조 주의보</span><br>권장: 밸런스드롭 2~3통';
   } else if (score <= 18) {
-    resultMessage = '🔥 <span class="highlight">보습 경보 발동</span>권장: 밸런스드롭 3~4통';
+    resultMessage = '🔥 <span class="highlight">보습 경보 발동</span><br>권장: 밸런스드롭 3~4통';
   } else {
     resultMessage = '⚠️ 오류: 점수 범위를 벗어났습니다';
   }
 } else if (type === 'standard') {
   if (score <= 5) {
-    resultMessage = '💦 <span class="highlight">유분 충만</span>권장: 밸런스드롭 0~0.5통';
+    resultMessage = '💦 <span class="highlight">유분 충만</span><br>권장: 밸런스드롭 0~0.5통';
   } else if (score <= 11) {
-    resultMessage = '🌗 <span class="highlight">밸런스 이상징후</span>권장: 밸런스드롭 0.5~1통';
+    resultMessage = '🌗 <span class="highlight">밸런스 이상징후</span><br>권장: 밸런스드롭 0.5~1통';
   } else if (score <= 17) {
-    resultMessage = '💧 <span class="highlight">수분 부족 예보</span>권장: 밸런스드롭 1~2통';
+    resultMessage = '💧 <span class="highlight">수분 부족 예보</span><br>권장: 밸런스드롭 1~2통';
   } else if (score <= 23) {
-    resultMessage = '🌬️ <span class="highlight">건조 주의보</span>권장: 밸런스드롭 2~3통';
+    resultMessage = '🌬️ <span class="highlight">건조 주의보</span><br>권장: 밸런스드롭 2~3통';
   } else if (score <= 30) {
-    resultMessage = '🔥 <span class="highlight">보습 경보 발동</span>권장: 밸런스드롭 3~4통';
+    resultMessage = '🔥 <span class="highlight">보습 경보 발동</span><br>권장: 밸런스드롭 3~4통';
   } else {
     resultMessage = '⚠️ 오류: 점수 범위를 벗어났습니다';
   }
 } else if (type === 'advanced') {
   if (score <= 12) {
-    resultMessage = '💦 <span class="highlight">유분 충만</span>권장: 밸런스드롭 0~0.5통';
+    resultMessage = '💦 <span class="highlight">유분 충만</span><br>권장: 밸런스드롭 0~0.5통';
   } else if (score <= 25) {
-    resultMessage = '🌗 <span class="highlight">밸런스 이상징후</span>권장: 밸런스드롭 0.5~1통';
+    resultMessage = '🌗 <span class="highlight">밸런스 이상징후</span><br>권장: 밸런스드롭 0.5~1통';
   } else if (score <= 38) {
-    resultMessage = '💧 <span class="highlight">수분 부족 예보</span>권장: 밸런스드롭 1~2통';
+    resultMessage = '💧 <span class="highlight">수분 부족 예보</span><br>권장: 밸런스드롭 1~2통';
   } else if (score <= 51) {
-    resultMessage = '🌬️ <span class="highlight">건조 주의보</span>권장: 밸런스드롭 2~3통';
+    resultMessage = '🌬️ <span class="highlight">건조 주의보</span><br>권장: 밸런스드롭 2~3통';
   } else if (score <= 65) {
-    resultMessage = '🔥 <span class="highlight">보습 경보 발동</span>권장: 밸런스드롭 3~4통';
+    resultMessage = '🔥 <span class="highlight">보습 경보 발동</span><br>권장: 밸런스드롭 3~4통';
   } else if (score > 65) {
-    resultMessage = '❄️ <span class="highlight">극건성</span>권장: 밸런스드롭 4통 이상';
+    resultMessage = '❄️ <span class="highlight">극건성</span><br>권장: 밸런스드롭 4통 이상';
   } else {
     resultMessage = '⚠️ 오류: 점수 범위를 벗어났습니다';
   }
@@ -100,6 +93,7 @@ if (type === 'simple') {
   </script>
 </body>
 </html>
+
 
 
 
