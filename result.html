@@ -68,9 +68,9 @@
 
     if (type === 'simple') {
       if (score <= 3) {
-        resultMessage = makeResult('💦', '유분 충만', '0~0.5통');
+        resultMessage = makeResult('💦', '유분 충만', '0~0.5&nbsp;통');
       } else if (score <= 6) {
-        resultMessage = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
+        resultMessage = makeResult('🌗', '밸런스 이상징후', '0.5~1&nbsp;통');
       } else if (score <= 10) {
         resultMessage = makeResult('💧', '수분 부족 예보', '1~2통');
       } else if (score <= 14) {
@@ -82,9 +82,9 @@
       }
     } else if (type === 'standard') {
       if (score <= 5) {
-        resultMessage = makeResult('💦', '유분 충만', '0~0.5통');
+        resultMessage = makeResult('💦', '유분 충만', '0~0.5&nbsp;통');
       } else if (score <= 11) {
-        resultMessage = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
+        resultMessage = makeResult('🌗', '밸런스 이상징후', '0.5~1&nbsp;통');
       } else if (score <= 17) {
         resultMessage = makeResult('💧', '수분 부족 예보', '1~2통');
       } else if (score <= 23) {
@@ -96,9 +96,9 @@
       }
     } else if (type === 'advanced') {
       if (score <= 12) {
-        resultMessage = makeResult('💦', '유분 충만', '0~0.5통');
+        resultMessage = makeResult('💦', '유분 충만', '0~0.5&nbsp;통');
       } else if (score <= 25) {
-        resultMessage = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
+        resultMessage = makeResult('🌗', '밸런스 이상징후', '0.5~1&nbsp;통');
       } else if (score <= 38) {
         resultMessage = makeResult('💧', '수분 부족 예보', '1~2통');
       } else if (score <= 51) {
@@ -118,6 +118,7 @@
   </script>
 </body>
 </html>
+
 
 
 
