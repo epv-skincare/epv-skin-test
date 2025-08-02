@@ -40,7 +40,7 @@
 
     let resultMessage = '';
 
-   if (type === 'simple') {
+if (type === 'simple') {
   if (score <= 3) {
     resultMessage = '💦 <span class="highlight">유분 충만</span><br>권장: 밸런스드롭 0~0.5통';
   } else if (score <= 6) {
@@ -88,9 +88,11 @@
   resultMessage = '⚠️ 오류: 테스트 유형을 알 수 없습니다';
 }
 
+
     document.getElementById('resultText').innerHTML = resultMessage;
   </script>
 </body>
 </html>
+
 
 
