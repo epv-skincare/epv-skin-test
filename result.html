@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>피부타입 테스트 결과</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Pretendard', sans-serif;
@@ -11,10 +12,12 @@
       padding: 2rem;
       text-align: center;
     }
+
     h1 {
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
+
     .result {
       font-size: clamp(1.4rem, 4vw, 2rem);
       font-weight: 700;
@@ -23,9 +26,22 @@
       padding: 2rem 3rem;
       border-radius: 16px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-      word-break: keep-all;
-      white-space: normal;
       line-height: 1.6;
+    }
+
+    .result-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .amount {
+      margin-top: 0.8rem;
+      font-size: 1.4rem;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -40,47 +56,57 @@
 
     let resultMessage = '';
 
+    function makeResult(icon, title, amount) {
+      return `
+        <div class="result-line">
+          <span class="emoji">${icon}</span>
+          <span class="title">${title}</span>
+        </div>
+        <div class="amount">권장: 밸런스드롭 ${amount}</div>
+      `;
+    }
+
     if (type === 'simple') {
       if (score <= 3) {
-        resultMessage = '💦 유분 충만 권장: 밸런스드롭 0~0.5통';
+        resultMessage = makeResult('💦', '유분 충만', '0~0.5통');
       } else if (score <= 6) {
-        resultMessage = '🌗 밸런스 이상징후 권장: 밸런스드롭 0.5~1통';
+        resultMessage = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
       } else if (score <= 10) {
-        resultMessage = '💧 수분 부족 예보 권장: 밸런스드롭 1~2통';
+        resultMessage = makeResult('💧', '수분 부족 예보', '1~2통');
       } else if (score <= 14) {
-        resultMessage = '🌬️ 건조 주의보 권장: 밸런스드롭 2~3통';
+        resultMessage = makeResult('🌬️', '건조 주의보', '2~3통');
       } else if (score <= 18) {
-        resultMessage = '🔥 보습 경보 발동 권장: 밸런스드롭 3~4통';
+        resultMessage = makeResult('🔥', '보습 경보 발동', '3~4통');
       } else {
         resultMessage = '⚠️ 오류: 점수 범위를 벗어났습니다';
       }
     } else if (type === 'standard') {
       if (score <= 5) {
-        resultMessage = '💦 유분 충만 권장: 밸런스드롭 0~0.5통';
+        resultMessage = makeResult('💦', '유분 충만', '0~0.5통');
       } else if (score <= 11) {
-        resultMessage = '🌗 밸런스 이상징후 권장: 밸런스드롭 0.5~1통';
+        resultMessage = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
       } else if (score <= 17) {
-        resultMessage = '💧 수분 부족 예보 권장: 밸런스드롭 1~2통';
+        resultMessage = makeResult('💧', '수분 부족 예보', '1~2통');
       } else if (score <= 23) {
-        resultMessage = '🌬️ 건조 주의보 권장: 밸런스드롭 2~3통';
+        resultMessage = makeResult('🌬️', '건조 주의보', '2~3통');
       } else if (score <= 30) {
-        resultMessage = '🔥 보습 경보 발동 권장: 밸런스드롭 3~4통';
+        resultMessage = makeResult('🔥', '보습 경보 발동', '3~4통');
       } else {
         resultMessage = '⚠️ 오류: 점수 범위를 벗어났습니다';
       }
     } else if (type === 'advanced') {
       if (score <= 12) {
-        resultMessage = '💦 유분 충만 권장: 밸런스드롭 0~0.5통';
+        resultMessage = makeResult('💦', '유분 충만', '0~0.5통');
       } else if (score <= 25) {
-        resultMessage = '🌗 밸런스 이상징후 권장: 밸런스드롭 0.5~1통';
+        resultMessage = makeResult('🌗', '밸런스 이상징후', '0.5~1통');
       } else if (score <= 38) {
-        resultMessage = '💧 수분 부족 예보 권장: 밸런스드롭 1~2통';
+        resultMessage = makeResult('💧', '수분 부족 예보', '1~2통');
       } else if (score <= 51) {
-        resultMessage = '🌬️ 건조 주의보 권장: 밸런스드롭 2~3통';
+        resultMessage = makeResult('🌬️', '건조 주의보', '2~3통');
       } else if (score <= 65) {
-        resultMessage = '🔥 보습 경보 발동 권장: 밸런스드롭 3~4통';
+        resultMessage = makeResult('🔥', '보습 경보 발동', '3~4통');
       } else if (score > 65) {
-        resultMessage = '❄️ 극건성 | 권장: 밸런스드롭 4통 이상';
+        resultMessage = makeResult('❄️', '극건성', '4통 이상');
       } else {
         resultMessage = '⚠️ 오류: 점수 범위를 벗어났습니다';
       }
